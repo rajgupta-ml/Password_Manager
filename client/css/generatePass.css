@@ -1,0 +1,152 @@
+.notActive{
+    display: none;
+}
+.generatePassword{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.803);;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.popupScreenContainer{
+    position: relative;
+    background-color: #151f3a;
+    width: 30%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.secondcointainer{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.closeRegPass{
+    cursor: pointer;
+    margin: 10px;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+}
+.cointainer span, .cointainerSetting span{
+    color: white;
+    font-weight: 200;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0;
+    
+}
+
+.headerTextArea{
+    display: flex;
+    justify-content: space-between;
+}
+
+#copy{
+    cursor: pointer;
+}
+#copy:hover{
+    color: #E94560;
+}
+
+
+.textarea{
+    border-radius: 0.3em;
+    width: 100%;
+    background-color: #182341;
+    height: 20%;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lengthSlider{
+   
+    display: flex;
+    flex-direction: row;
+    background-color: #182341;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.3em;
+}
+.lengthSlider img{
+    width: 16px;
+    height: 16px;
+}
+
+#Slider{
+    -webkit-appearance: none;
+    padding: 2px;
+    width: 80%;
+    height: 2px;
+    background-color: #151f3a;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+} 
+#Slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
+
+.setting{
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.cointainerSetting{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #182341;
+    padding: 13px 10px 13px 10px;
+    /* margin: 0px 0px 10px 0px; */
+    border-radius: 0.3em;
+}
+
+.cointainerSetting input{
+    -webkit-appearance: none;
+    background-color: #151f3a;
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.cointainerSetting input:checked{
+    background-color: white;
+}
+
+.genPassSubmit{
+    margin-top: 10px;
+    background-color: #E94560;
+    outline: none;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.genPassSubmit:hover{
+    background-color: #f65772;
+}
+.passRegtitle{
+    padding: 0;
+}

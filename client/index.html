@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassLock</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script type = "module" src="js/popup.js" defer></script>
+    <script type = "module" src="js/Validation_Registration.js" defer></script>
+    <script type = "module" src="js/toggle.js" defer></script>
+    <script type = "module" src="js/loginsystem.js" defer></script>
+    <script src="https://kit.fontawesome.com/1cc3280e19.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="opacity" id = "opacity_popup">
+            <div class="popup">
+                <div class="err" id = "err">
+                    <img src="" alt="warning" id ="imgPopup">
+                    <h2 class = 'errMessage' id = "heading"></h2>
+                    <p class = "errMessage" id = "para"></p>
+                </div>
+                <div class="btnCancelSuccess " id ="btnCancel">
+                    <button type="submit" id = 'realBtn'>Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="wrapper-one">
+                <div class="title">
+                    <div class="logo">
+                        Last<br>Password<br></div>
+                    <span>It is a intuitive password managment system to simplify your life</span>
+                </div>
+            </div>
+            
+            <div class="wrapper-two">
+                <div class="toggle-switch">
+                    <button class="movesignup rightbtn ">Sign Up</button>
+                    <button class="movesignin leftbtn">Sign In</button>
+                    <button class="movebtn">Sign Up</button>
+                </div>
+                
+                <form action="#" class="form signup-form js-form-signup" id ="form">
+                    <div class="inputvar">
+                        <span>First Name</span>
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter Your First Name" autocomplete="off">
+                        <small class = "wrong">error message</small>
+                    </div>
+                    <div class="inputvar ">
+                        <span>Last Name</span>
+                        <input type="text" name="lastname" id="lastname" placeholder="Enter Your Last Name" autocomplete="off">
+                        <small class = "wrong">error message</small>
+                    </div>
+                    <div class="inputvar">
+                        <span>Email Address</span>
+                        <input type="text" name="email" id="email" placeholder="Enter Your Email Address" autocomplete="off">
+                        <small class = wrong>error message</small>
+                    </div>
+                    <div class="inputvar">
+                        <span>Password</span>
+                        <input type="password" name="password" id="password" placeholder="Enter Your password" autocomplete="off">
+                        <small class = "wrong">error message</small>
+                    </div>
+                    <div class="inputvar">
+                        <span>Confirm Password</span>
+                        <input type="password" name="Confirm_pass" id="pass2" placeholder="Re-enter your password" autocomplete="off">
+                        <small class = "wrong">error message</small>
+                    </div>
+                    <div class="submitbtn">
+                        <button type="submit">Sign Up</button>
+                        <a class = "lnk">I'm already a member</a>
+                    </div>
+                    
+                </form>
+                <form action="#" class="form js-form-login" id = "loginform">
+
+                    <div class="inputvar">
+                        <span>Email Address</span>
+                        <input type="email" name="email" id="logemail" placeholder="Enter Your Email Address" autocomplete="off">
+                    </div>
+                    <div class="inputvar">
+                        <span>Password</span>
+                        <input type="password" name="password" id="logpassword" placeholder="Enter Your password" autocomplete="off">
+                    </div>
+                    <div class="submitbtn">
+                        <button type="submit">Sign In</button>
+                        <a>Forgot Password?</a>
+                    </div>
+                    
+                </form>
+            </div>
+        </div> 
+    </div>
+   
+   
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="css/menuStyle.css">
+   <link rel="stylesheet" href="css/dashboard.css">
+   <link rel="stylesheet" href="css/userDetailsPopUp.css">
+   <link rel="stylesheet" href="css/generatePass.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="js/auth.js" type = "module"></script>
+    <script defer src="js/init.js" type = "module"></script>
+    <script defer src="js/userDetailsPopup.js" type = "module"></script>
+    <script defer src="js/userDetailsDataFetch.js" type = "module"></script>
+    <script defer src="js/generatePass.js" type = "module"></script>
+    <script src="https://kit.fontawesome.com/1cc3280e19.js" crossorigin="anonymous"></script>
+   
+    
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu">
+            <div class="navbar">
+                <div class="menu1" id = "menu1">
+                    <h1><span class = "heading">L</span>ast Password</h1>
+                    <div class = "line"></div>
+                    <div class="list" id = "list1">
+                        <a href = "#">
+                            <img src="Images/padlock.png" alt="">
+                            <li>Password</li>
+                        </a>
+                    </div>
+                    <div class="list" id = "list2">
+                        <a href  = "#"> 
+                            <img src="Images/writing.png" alt="">
+                            <li>Generate Password</li>
+                        </a>
+                    </div>
+                    <!-- <div class="list" id = "list3">
+                        <a href = "#">
+                            <img src="Images/arm.png" alt="">
+                            <li>Strength Checker</li>
+                        </a>
+                    </div>
+                    <div class="list" id = "list4">
+                        <a href = "#">
+                            <img src="Images/hacker.png" alt="">
+                            <li>Password Hacked</li>
+                        </a>
+                    </div> -->
+                    <div class="list" id = "list5">
+                        <a id = "logout">
+                            <img src="Images/logout.png" alt="">
+                            <li>Logout</li>
+                        </a>
+                    </div>
+                </div>
+                <div class="logout">
+                    <a>
+                        <img src="Images/user.png" alt="">
+                        <li>My Account</li>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="RegisterUserDetails" id ="RegisterUserDetailsPopup">
+                <form action="#" class="regForm" id = "form">
+                    <div class="headerAddNew">
+                        <h1>Add New</h1>
+                    </div>
+                    
+                    <a class = 'close' id = "closeBtn"><img src = "Images/close.png"></a>
+                    <div class="inputContainer">
+                        <span>Website Name</span>
+                        <input type="text" class="Name" placeholder="Enter you website Name" id ="websiteName">
+                    </div>
+                    <div class="inputContainer">
+                        <span>Email Id</span>
+                        <input type="text" class="emailId" placeholder="Enter your website email Id" id = "emailId">
+                    </div>
+                    <div class="inputContainer">
+                        <span>Password</span>
+                        <input type="password" class="password" placeholder="Enter your website Password" id = "password">
+                    </div>
+                    <div class="inputContainer">
+                        <span>Confirm Password</span>
+                        <input type="password" class="confirmPassword" placeholder="Confirm Your Password" id = "confirmPassword">
+                    </div>
+                    <div class="submitBtnContainer">
+                        <button type="submit" class = "submitBtn">Submit</button>  
+                    </div>
+                </form>
+                
+            </div>
+            <div class="horizontalFeatures">
+                    <div class="mainbtn">
+                        <button class="addNew" type="submit" id = 'addNew'>Add New</button>
+                        <div class="search">
+                                <input type="text" id = "search" class = "inputSearch">
+                                <button class = "inputBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                         <div class="welcome">
+                        <h5>Hello,</h5>
+                        <h5 id = "welcome_name"></h5>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id = tableData>
+             
+                    </tbody>
+                </table>
+            </div>
+            <div class="notActive" id = "generatePass">
+                <div class="popupScreenContainer">
+                    <div class="secondcointainer">
+                        <img src = "Images/close.png" class = "closeRegPass" id = "closeRegPass">
+                        <h1>Generate Password</h1>
+                        <div class="cointainer">
+                            <div class="headerTextArea">
+                                <span>Generated Password</span>
+                                <span id = "copy"></span>
+                            </div>
+                            <div class="textarea" id = "showArea"></div>
+                        </div>
+                        <div class="cointainer">
+                            <span>lenght</span>
+                            <div class="lengthSlider">
+                                <img src = "Images/range.png">
+                                <input type="range" min = "1" max = "32" value="16" id = "Slider" class = "slider">
+                                <span id = "output"></span>
+                            </div>
+                        </div>
+                        <span class = "setting">Settings</span>
+                        <div class="cointainerSetting">
+                            <span>Include number</span>
+                            <input type="checkbox" id = "checkbox1">
+                        </div>
+                        <div class="cointainerSetting">
+                            <span>Include Capital</span>
+                            <input type="checkbox" id = "checkbox2">
+                        </div>
+                        <div class="cointainerSetting">
+                            <span>Include symbols</span>
+                            <input type="checkbox" id = "checkbox3">
+                        </div>
+                        <div class="cointainerSetting">
+                            <span>Include symbols</span>
+                            <input type="checkbox" id = "checkbox4">
+                        </div>
+                        <input type="button" value="Generate Password" class = "genPassSubmit" id = "genPassSubmit">
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

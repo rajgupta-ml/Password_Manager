@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300&family=League+Spartan:wght@100;300;600;900&display=swap');
+.RegisterUserDetails{
+display: none;
+opacity: 0;
+transition: opacity 500ms;
+animation: fade-out 1s forwards;
+}
+
+.active{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.803);
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: opacity 500ms;
+    animation: fade-in 1s forwards;
+}
+
+.regForm{
+    position: relative;
+    padding: 20px 50px;
+    background-color:  #151f3a;
+    width: 30%;
+    height: 80%;
+    border-radius: 0.3em;
+}
+.headerAddNew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.429);
+}
+input{
+    color: white    ;
+    padding: 10px 0px 10px 0px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.536);
+    background-color: transparent;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+}
+
+span{
+    font-weight: 200;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 1px;
+    /* padding-bottom: 5px; */
+}
+
+.submitBtnContainer button{
+    color: white;
+    margin: 20px 0px;
+    width: 100%;
+    background-color: #E94560;
+    padding: 10px 70px 10px 70px;
+    border: none;
+    border-radius: 0.3em;
+}
+.submitBtnContainer button:hover{
+    background-color: #f65772;
+}
+.submitBtnContainer{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.close{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.close img{
+    width: 10px;
+    height: 10px;
+}
+
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 1;
+    }
+}

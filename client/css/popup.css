@@ -1,0 +1,104 @@
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 1;
+    }
+}
+
+
+.opacity{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.803);
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: none;
+    opacity: 0;
+    /* transition: opacity 500ms; */
+    animation: fade-in 1s forwards;
+    
+}
+
+.error{
+    display: flex;
+    opacity: 1; 
+}
+
+.popup{
+    z-index: 10;
+    /* border: 1px solid black; */
+    background-color: white;
+    width: 25%;
+    height: 30%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.err{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.btnCancelSuccess{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 30%;
+    
+}
+.btnCancelError{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 30%;
+    
+}
+
+.btnCancelError button{
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #e74c3c;
+    cursor: pointer;
+}
+
+.btnCancelSuccess button{
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #2ecc71;
+    cursor: pointer;
+}
+
+.errMessage{
+    padding: 2px;
+}
+.err img{
+    width: 50px;
+    height: 50px;
+}

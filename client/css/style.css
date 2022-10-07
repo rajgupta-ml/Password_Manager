@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300&family=League+Spartan:wght@100;600;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    /* background: hsla(346, 42%, 56%, 1);
+    background: linear-gradient(360deg, hsla(346, 42%, 56%, 1) 0%, hsla(3, 100%, 73%, 1) 100%);
+    background: -moz-linear-gradient(360deg, hsla(346, 42%, 56%, 1) 0%, hsla(3, 100%, 73%, 1) 100%);
+    background: -webkit-linear-gradient(360deg, hsla(346, 42%, 56%, 1) 0%, hsla(3, 100%, 73%, 1) 100%); */
+    background-color: #151f3a;
+    /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#BD5F75", endColorstr="#FF7B74", GradientType=1 ); */
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* start of the login form  */
+.main-wrapper{
+    width: 80%;
+    height: 90%;
+    /* border: 1px solid black; */
+    display: flex;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.wrapper-one{
+    /* border: 1px solid red; */
+    border: none;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+.wrapper-two{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    background-color: #151f3a;
+    border-radius: 0 10px 10px 0;
+}
+
+/* positioning the toggle switches */
+
+.toggle-switch{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    margin: 10px;
+    width: 60%;
+    background-color: #0F3460;
+    border-radius: 10px;
+    position: relative;
+}
+.toggle-switch button{
+    margin: 3px;
+    /* height: 100%; */
+    font-weight: 300;
+    width: 50%;
+    color: white;
+    padding:10px;
+    font-size: 15px;
+    background-color:transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.inputvar input::placeholder{
+    color: rgba(255, 255, 255, 0.585);
+    opacity: 1;
+}
+.toggle-switch .movebtn{
+    position: absolute;
+    /* display: none; */
+    top:0;
+    left:0;
+    bottom: 0;
+    background-color: #151f3a;
+    border-radius: 5px;
+    transform: translateX(0%);
+    transition: all 1s ease-in-out;
+
+}
+.toggle-switch .selected {
+    transform: translateX(97%);
+    transition: all 1s ease-in-out;
+}
+
+form{
+    width: 100%;
+    padding: 10px 80px 10px 80px;
+}
+form .text-wrapper{
+    display: none;
+    /* background-color: white; */
+    display: flex;
+    width: 45%;
+    text-align: left;
+    justify-content: space-between;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.221);
+    font-weight: 50;
+    padding-bottom: 20px;
+ }
+
+form .inputvar{
+    /* border: 1px solid red; */
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+form .inputvar span{
+    color: white;
+    padding: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+form .inputvar input{
+    display: block;
+    font-size: 15px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.585);;
+    outline: none;
+    /* position: relative; */
+}
+
+
+form .inputvar input:focus{
+    border-bottom: 1px solid #303947;
+}
+form .inputvar input:hover{
+    border-bottom: 1px solid #303947;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.submitbtn button{
+    padding: 10px;
+    font-size: 16px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #E94560;
+    color: white;
+    cursor: pointer;
+}
+
+.submitbtn button:hover{
+    transition: all 250ms ease-in-out;
+    background-color: #E94560;
+}
+.submitbtn a{
+    color: rgba(255, 255, 255, 0.253);
+    font-size: 15px;
+    margin-left: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.form{
+    display: none;
+    opacity: 0;
+    
+}
+
+.signup-form{
+    display: block;
+    transition: all 1s ease-out;
+    opacity: 1;
+    
+}
+.login-form{
+    display: block;
+    transition: all 1s ease-out;
+    opacity: 1;
+}
+
+.inputvar small{
+   font-size: 15px;
+   visibility: hidden;
+
+}
+
+form .success input{
+    border-bottom-color: #2ecc71;
+}
+
+form .error input{
+    border-bottom-color:#e74c3c;
+} 
+form .error small{
+    visibility: visible;
+    color:#e74c3c;
+} 
+form .success small{
+    visibility: visible;
+    color:#2ecc71;
+} 
+/* end of the login form */
+
+/* start of the image container */
+.wrapper-one{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0F3460;
+    padding: 20px;
+} 
+
+.wrapper-one .logo{
+    color: white;
+    font-size: 60px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.wrapper-one span{
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.title{
+    width: 80%;
+}
+/* end of the image container */
+
+/* login error mesasage */
+.l{
+    font-size: 1000px;
+}
